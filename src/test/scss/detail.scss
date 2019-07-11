@@ -1,0 +1,57 @@
+html, body {
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Microsoft Yahei", "PingFang SC";
+}
+
+.listview {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.title0 {
+    color: #ffffff;
+    padding: 0.5rem;
+    font-size: 0.4rem;
+    border-bottom: 1px solid #ffffff;
+    background-color: #666666;
+}
+
+.item {
+    padding: 0.5rem;
+    font-size: 0.4rem;
+    border-bottom: 1px solid #ffffff;
+    background-color: #f4f4f4;
+}
+
+.shadow {
+    margin: 2rem;
+    width: 4rem;
+    height: 2rem;
+}
+
+.shadow-content {
+    padding: 0.4rem;
+}
+
+$baseColor: green;
+
+.imuiColor {
+    color: $baseColor !important;
+}
+
+.imuiBgColor {
+    background-color: $baseColor !important;
+}
+
+.imuiBorder {
+    border: 1px solid $baseColor !important;
+}
+
+.imuiBorderBottom {
+    border-bottom: 1px solid $baseColor !important;
+}

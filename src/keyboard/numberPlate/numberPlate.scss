@@ -1,0 +1,88 @@
+.car_keyboard{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+
+    .car_container{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #f4f4f4;
+        padding: 0.4rem 0.04rem 0.294rem 0.093rem;
+    }
+
+    .line{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .keycap{
+        width: 0.933rem;
+        height: 1.12rem;
+        line-height: 1.12rem;
+        background: #ffffff;
+        font-size: 0.613rem;
+        color: #999999;
+        text-align: center;
+        border: #999999 1px solid;
+        border-radius: 0.213rem;
+        box-sizing: border-box;
+        margin-right: 0.053rem;
+        margin-bottom: 0.106rem;
+    }
+
+    .chinese{
+        width: 1.44rem;
+        height: 1.12rem;
+        line-height: 1.12rem;
+        background: #bbb9b9;
+        color: #ffffff;
+        border-radius: 0.213rem;
+        text-align: center;
+        font-size: 0.613rem;
+        margin: 0 0.253rem 0 0.04rem;
+    }
+
+    .extra{
+        color: #FE952C; 
+        border: #FE952C 1px solid
+    }
+
+    .delete{
+        width: 0.933rem;
+        height: 1.12rem;
+        padding: 0 0.093rem 0 0.2rem;
+    }
+
+    .gray{
+        background: #bbb9b9;
+        color: #666666;
+        border: #999999 1px solid;
+    }
+
+    .myani{
+        animation: changecolor .5s 1;
+    }
+
+    @-webkit-keyframes changecolor {
+        50% {color: #FE952C; border-color: #FE952C;}
+    }
+
+    @keyframes changecolor {
+        50% {color: #FE952C; border-color: #FE952C;}
+    }
+
+    .myani01{
+        animation: changecolor01 .5s 1;
+    }
+
+    @-webkit-keyframes changecolor01 {
+        50% {color: #ffffff; border-color: #FE952C; background: #FE952C}
+    }
+
+    @keyframes changecolor01 {
+        50% {color: #ffffff; border-color: #FE952C; background: #FE952C}
+    }
+}

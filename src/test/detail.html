@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
+<script src="https://new.icity24.cn/icity/apps/static/configflexible.icity.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-if="type==0">
+        <p></p>
+        <imui2-button type='0'></imui2-button><p></p>
+        <imui2-button type='1'></imui2-button><p></p>
+        <imui2-button type='2'></imui2-button><p></p>
+    </div>
+    <div v-else-if="type==1">
+        <p></p>
+        <imui2-password name="医保卡密码" placeholder="请输入原密码" :callback="commonCallback"></imui2-password>
+    </div>
+    <div v-else-if="type==2">
+        <p></p>
+        <imui2-toggle></imui2-toggle>
+    </div>
+    <div v-else-if="type==3">
+        <p></p>
+        <imui2-text v-model="inputValue" placeholder="请输入身份证号码"></imui2-text>
+    </div>
+    <div v-else-if="type==4">
+        <p></p>
+        <imui2-label-text name="手机号" :value="labeltext" isright='1'></imui2-label-text>
+    </div>
+    <div v-else-if="type==5">
+        <p></p>
+        <imui2-label name="手机号" value='3232323' placeholder="15069195567"></imui2-label>
+    </div>
+    <div v-else-if="type==104">
+        <p></p>
+        <imui2-source value='济南公积金中心'></imui2-source>
+        <imui2-fixed-source value='济南公积金中心'></imui2-fixed-source>
+    </div>
+    <div v-else-if="type==105">
+        <imui2-search :callback="searchCallback"></imui2-search>
+    </div>
+    <div v-else-if="type==107">
+        <imui2-search2 :callback="searchCallback"></imui2-search2>
+    </div>
+    <div v-else-if="type==106">
+        <imui2-warn type='0' title='提交成功' content='活动已下线，即使提交任务' btntext0="回到首页" btntext1="回到首页"></imui2-warn>
+    </div>
+    <div v-else-if="type==108">
+        <imui2-upgrade2 title="顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶"></imui2-upgrade2>
+    </div>
+    <div v-else-if="type==200">
+        <imui2-menu :data="menuData" name="tmpname"></imui2-menu>
+    </div>
+    <div v-else-if="type==201">
+        <imui2-multi-menu :data="multiMenuData" :callback="onMultiMenu" name="tmpname"></imui2-multi-menu>
+    </div>
+    <div v-else-if="type==203">
+        <imui2-row-radio ref='rowradio' name="投诉建议" :data="rowMenuData"></imui2-row-radio>
+    </div>
+    <div v-else-if="type==300">
+        <imui2-listview class="listview" :onload="onload" :onrefresh="onload" ref="listview">
+            <div class="item" v-for="i in 20">Hello World {{i}}</div>
+        </imui2-listview>
+    </div>
+    <div v-else-if="type==301">
+        <imui2-scroll-fixed2 :callback="onScrollFixed">
+            <imui2-listview class="listview" :onload="onload">
+                <div class="_scrollitem" slot="content" v-for="i in 20">
+                    <div class="title0 _scrollfixed">标题{{i}}</div>
+                    <div class="item" v-for="i in 5">内容{{i}}</div>
+                </div>
+            </imui2-listview>
+        </imui2-scroll-fixed2>
+    </div>
+    <div v-else-if="type==402">
+        <imui2-label name="地址：" :value="address" :callback="selectAddress" placeholder="请选择地址"></imui2-label>
+    </div>
+    <div v-else-if="type==500">
+        <imui2-arrow :callback="commonCallback" :hasicon=true :hasarrow=true>
+            <div slot="content">阿里巴巴中国</div>
+        </imui2-arrow>
+        <imui2-arrow :callback="commonCallback">
+            <div slot='content'>
+                阿里巴巴中国<br/>
+                <font size="1">时间：2018-04-12</font>
+            </div>
+        </imui2-arrow><imui2-arrow :callback="commonCallback">
+            <div slot='content'>阿里巴巴中国</div>
+        </imui2-arrow>
+    </div>
+    <div v-else-if="type==501">
+        <imui2-cuttle title="浪潮云服务顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶" :islighter=true>
+            <div slot="content">
+                <div v-for="i in 5">Hello World{{i}}</div>
+            </div>
+        </imui2-cuttle>
+    </div>
+    <div v-else-if="type==502">
+        <imui2-shadow class="shadow">
+            <div slot="content" class="shadow-content">
+                爱城市网
+            </div>
+        </imui2-shadow>
+    </div>
+    <div v-else-if="type==600">
+        <imui2-nav :data="navData" :callback="commonCallback"></imui2-nav>
+    </div>
+    <div v-else-if="type==601">
+        <imui2-nav2 :data="navData" :callback="commonCallback"></imui2-nav2>
+    </div>
+    <div v-else-if="type==700">
+        <imui2-week selected-date="2018-10-14" :callback="commonCallback"></imui2-week>
+    </div>
+    <div v-else-if="type==800">
+        <imui2-rule :content="ruleData" :callback="commonCallback"></imui2-rule>
+    </div>
+    <div v-else-if="type==900">
+        <imui2-agreement name="爱城市网注册协议" ref='agreement' :callback="commonCallback"></imui2-agreement>
+    </div>
+    <div v-else-if="type==901">
+        <imui2-attention value="支持近三个月帐户查询"></imui2-attention>
+    </div>
+    <div v-else-if="type==1000">
+        <imui2-progress :value="progress"></imui2-progress>
+    </div>
+    <div v-else-if="type==1100">
+        <imui2-sklt-aggregate :loaded="loaded">
+            <div style="height: 100%; width: 100%; line-height: 5; text-align: center;font-size: 0.8rem">
+                <p>我是聚合页面正文，</p><p>我刚加载渲染完，</p><p>嘿嘿~</p>
+            </div>
+        </imui2-sklt-aggregate>
+    </div>
+    <div v-else-if="type==1101">
+        <imui2-sklt-news-detail :loaded="loaded">
+            <div style="height: 100%; width: 100%; line-height: 5; text-align: center;font-size: 0.8rem">
+                <p>我是资讯详情页面正文，</p><p>我刚加载渲染完，</p><p>嘿嘿~</p>
+            </div>
+        </imui2-sklt-news-detail>
+    </div>
+    <div v-else-if="type==1102">
+        <imui2-sklt-list :count="6" :multi-line="4" :with-img="true" :loaded="loaded">
+            <div style="height: 100%; width: 100%; line-height: 5; text-align: center;font-size: 0.8rem">
+                <p>我是列表页面正文，</p><p>我刚加载渲染完，</p><p>嘿嘿~</p>
+            </div>
+        </imui2-sklt-list>
+    </div>
+    <div v-else-if="type==1103">
+        <imui2-sklt-12345></imui2-sklt-12345>
+    </div>
+    <div v-else-if="type==1300">
+        <imui2-id-card></imui2-id-card>
+    </div>
+    <div v-else-if="type==1301">
+        <imui2-number-plate code="370100"></imui2-number-plate>
+    </div>
+    <!--<div v-else-if="type==1200">-->
+        <!--&lt;!&ndash;<img v-gallery:demo src="http://172.22.16.138:8080/pc/microapp/main/assets/ui.png" alt="">&ndash;&gt;-->
+        <!--<img v-gallery="'demo'" src="http://172.22.16.138:8080/pc/microapp/main/assets/guide.png" alt="">-->
+        <!--<img v-gallery src="http://zwfw.hunan.gov.cn/picPathMapping?picPath=approve%2F2017-12-19%2F1513652311401%24%24%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9.png" alt="">-->
+    <!--</div>-->
+    <!--<div v-else-if="type==1201">-->
+        <!--<imui2-pdf-viewer src="http://icity24.infile.cloud.inspur.com/Pdf/12345907_201806040000000028.pdf"></imui2-pdf-viewer>-->
+    <!--</div>-->
+</div>
+</body>
+</html>

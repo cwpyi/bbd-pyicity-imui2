@@ -1,0 +1,86 @@
+/**
+ * Created by sunyuan on 2018/7/31 0031
+ */
+.sklt-root{
+    background-color: #fff;
+}
+/* 圆形 */
+.circle{
+    border-radius: 50%;
+}
+.mt-2{
+    margin-top: 0.26rem;
+}
+.mt-3{
+    margin-top: 0.4rem;
+}
+.ml-3{
+    margin-left: 0.4rem;
+}
+.mr-3{
+    margin-right: 0.4rem;
+}
+.mx-3{
+    margin: 0 0.4rem;
+}
+.m-3{
+    margin: 0.4rem;
+}
+.pt-3{
+    padding-top: 0.4rem;
+}
+.pl-0{
+    padding-left: 0!important;
+}
+.pt-0{
+    padding-top: 0!important;
+}
+.pl-3{
+    margin-left: 0.4rem;
+}
+.p-3{
+    padding: 0.4rem;
+}
+.flex{
+    display: flex;
+}
+.flex-around{
+    justify-content: space-around;
+}
+.flex-1{
+    flex-grow: 1;
+}
+/* 聚合页应用图标 */
+.sklt-app{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.13rem;
+}
+/* banner */
+.sklt-banner{
+    height: 2.6rem;
+}
+.bd-bottom{
+    border-bottom: #f4f4f4 1px solid;
+}
+.sklt-title{
+    width: 37.5%;
+    height: 0.4rem;
+}
+
+/* 列表 */
+.sklt-list{
+    display: flex;
+    padding: 0.4rem;
+}
+.sklt-list-img{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.sklt-list-text{
+    /*margin-left: 0.4rem;*/
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
